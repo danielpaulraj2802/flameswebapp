@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Flames</title>
+</head>
+<style>
+    body{
+        margin: auto;
+        padding: 20px;
+        background-color: pink;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        text-align: center;
+    }
+    .name{
+        padding: 20px;
+        justify-content: center;
+        border-radius: 20px;
+        color: rgb(232, 89, 113);
+    }
+    input[type="text"]{
+        border-radius: 10px;
+        padding: 10px;
+        margin-bottom: 10px;
+        justify-content: center;
+        background-color: rgb(241, 232, 238);
+    }
+    input[type="submit"]{
+        border-radius: 20px;
+        background-color:rgb(233, 115, 174);
+        width:100px;
+        padding: 10px;
+    }
+    .heart1{
+        margin: 10px;
+        color:rgb(245, 153, 153);
+        font-size: 200px;
+        line-height: 0;
+        position:absolute;
+        top:70px;
+        left:0;
+        transform: rotate(340deg);
+    }
+    .heart2{
+        margin: 10px;
+        color:rgb(240, 138, 138);
+        font-size: 200px;
+        line-height: 0;
+        position:absolute;
+        bottom:70px;
+        right:0;
+        transform: rotate(34deg);
+    }
+</style>
+
+<body>
+    <h1>FLAMES</h1>
+    <form method="POST" action="{{url_for('index')}}">
+        <div class="name">
+            <input type="text" name="name1" placeholder="Enter He Name"> <br>
+            <input type="text" name="name2" placeholder="Enter She Name"><br>
+            <input type="submit" value="Calculate">
+        </div>
+    </form>
+    {% if result %}
+        <p>The result is :{{result}}</p>
+    {% endif %}
+    <div class="heart1">&#x2665;</div>
+    <div class="heart2">&#x2665;</div>
+
+</body>
+</html>
